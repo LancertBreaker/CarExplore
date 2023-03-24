@@ -11,7 +11,7 @@ public class Location {
 
     public void startUpdateLocation() {
         try {
-            serverSocket = new ServerSocket(8808);
+            serverSocket = new ServerSocket(8080);
 
             // 开始服务端监听
             Socket socket1 = serverSocket.accept();
