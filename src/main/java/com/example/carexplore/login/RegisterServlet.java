@@ -20,7 +20,6 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String phone = request.getParameter("phone");
         int id = 3;
-
         try {
             UserBean userBean = new UserBean();
             userBean.setPassword(password);
@@ -31,6 +30,7 @@ public class RegisterServlet extends HttpServlet {
             response.setContentType("text/json;charset=UTF-8");
             if (b) {
                 response.getWriter().append("注册成功");
+                response.sendRedirect("index.jsp");
             } else {
                 response.getWriter().append("注册失败");
             }
